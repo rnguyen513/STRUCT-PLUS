@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MOP-cd-TFu">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5lR-E1-VQJ">
+            <objects>
+                <viewController id="MOP-cd-TFu" customClass="ViewController" customModule="ARKitRectangleDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PbY-Rf-lZl">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZG-Hr-Hoc">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcr-4o-ghG">
+                                <rect key="frame" x="0.0" y="845" width="430" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a message." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBl-Tv-UYE">
+                                        <rect key="frame" x="16" y="16" width="398" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZBl-Tv-UYE" secondAttribute="trailing" constant="16" id="8J5-K5-Cb3"/>
+                                    <constraint firstItem="ZBl-Tv-UYE" firstAttribute="top" secondItem="Wcr-4o-ghG" secondAttribute="top" constant="16" id="Q7F-ru-upY"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZBl-Tv-UYE" secondAttribute="bottom" constant="16" id="bE0-qi-rmB"/>
+                                    <constraint firstItem="ZBl-Tv-UYE" firstAttribute="leading" secondItem="Wcr-4o-ghG" secondAttribute="leading" constant="16" id="sXx-WH-OCR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OC-Jo-UXh">
+                                <rect key="frame" x="348" y="75" width="66" height="34"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearButton:" destination="MOP-cd-TFu" eventType="touchUpInside" id="Ldc-g7-2Lf"/>
+                                    <action selector="onRestartButton:" destination="MOP-cd-TFu" eventType="touchUpInside" id="fWz-OW-emi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXR-Dy-jPE">
+                                <rect key="frame" x="352" y="117" width="62" height="34"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Debug">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearButton:" destination="MOP-cd-TFu" eventType="touchUpInside" id="mzD-Mn-RqD"/>
+                                    <action selector="onDebugButton:" destination="MOP-cd-TFu" eventType="touchUpInside" id="6sY-1r-WOn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YM-9t-ZZe">
+                                <rect key="frame" x="245" y="75" width="95" height="34"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Clear Rects">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearButton:" destination="MOP-cd-TFu" eventType="touchUpInside" id="rVi-Uz-33i"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIA-rh-a5B">
+                                <rect key="frame" x="20" y="116" width="203" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="65" minValue="-200" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="oEl-uX-JvU">
+                                        <rect key="frame" x="6" y="26" width="191" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <connections>
+                                            <action selector="xSliderValueChanged:" destination="MOP-cd-TFu" eventType="valueChanged" id="HpD-aN-gFd"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-200" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="aVj-mT-nMI">
+                                        <rect key="frame" x="6" y="91" width="191" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <connections>
+                                            <action selector="ySliderValueChanged:" destination="MOP-cd-TFu" eventType="valueChanged" id="2bo-ib-kVG"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X LOAD: 65.0 N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtq-X3-Oxp">
+                                        <rect key="frame" x="8" y="8" width="187" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Y LOAD: 0.0 N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMH-rD-a10">
+                                        <rect key="frame" x="8" y="73" width="187" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr0-8t-pkj">
+                                <rect key="frame" x="20" y="252" width="122" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Toggle Plane">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onPlaneButton:" destination="MOP-cd-TFu" eventType="touchUpInside" id="HCn-zW-AD3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-Bs-hZX">
+                                <rect key="frame" x="20" y="73" width="171" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Simulation Settings">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="tinted" title="Simulation Settings">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toggleSlidersVisibility:" destination="MOP-cd-TFu" eventType="touchUpInside" id="sGB-UM-D4y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zmo-nJ-q2Z"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wcr-4o-ghG" firstAttribute="bottom" secondItem="zmo-nJ-q2Z" secondAttribute="bottom" id="8dc-QZ-K3W"/>
+                            <constraint firstItem="6YM-9t-ZZe" firstAttribute="centerY" secondItem="cXR-Dy-jPE" secondAttribute="centerY" id="FnO-sp-bnn"/>
+                            <constraint firstItem="zmo-nJ-q2Z" firstAttribute="trailing" secondItem="6OC-Jo-UXh" secondAttribute="trailing" constant="16" id="OCU-dE-gtN"/>
+                            <constraint firstItem="cXR-Dy-jPE" firstAttribute="leading" secondItem="zmo-nJ-q2Z" secondAttribute="leading" constant="16" id="PiD-YB-CeS"/>
+                            <constraint firstItem="Wcr-4o-ghG" firstAttribute="trailing" secondItem="zmo-nJ-q2Z" secondAttribute="trailing" id="TIK-VO-ejK"/>
+                            <constraint firstItem="6OC-Jo-UXh" firstAttribute="leading" secondItem="6YM-9t-ZZe" secondAttribute="trailing" constant="8" id="i6l-Y3-XiG"/>
+                            <constraint firstItem="Wcr-4o-ghG" firstAttribute="leading" secondItem="zmo-nJ-q2Z" secondAttribute="leading" id="le0-HY-pWl"/>
+                            <constraint firstItem="cXR-Dy-jPE" firstAttribute="top" secondItem="zmo-nJ-q2Z" secondAttribute="top" constant="16" id="plF-RX-eoW"/>
+                            <constraint firstItem="6YM-9t-ZZe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cXR-Dy-jPE" secondAttribute="trailing" constant="16" id="qyk-86-L3s"/>
+                            <constraint firstItem="6OC-Jo-UXh" firstAttribute="centerY" secondItem="cXR-Dy-jPE" secondAttribute="centerY" id="uD8-tK-Gbp"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="clearButton" destination="6YM-9t-ZZe" id="aKc-OP-hCE"/>
+                        <outlet property="debugButton" destination="cXR-Dy-jPE" id="mUo-Tn-xm0"/>
+                        <outlet property="messageLabel" destination="ZBl-Tv-UYE" id="vD6-Ss-dis"/>
+                        <outlet property="messageView" destination="Wcr-4o-ghG" id="SXn-dX-OUd"/>
+                        <outlet property="planeButton" destination="Zr0-8t-pkj" id="nF0-CB-XQa"/>
+                        <outlet property="restartButton" destination="6OC-Jo-UXh" id="i4T-mH-NRY"/>
+                        <outlet property="sceneView" destination="FZG-Hr-Hoc" id="oS8-Am-0ul"/>
+                        <outlet property="slidersContainerView" destination="fIA-rh-a5B" id="w1m-9q-Mif"/>
+                        <outlet property="toggleButton" destination="Y88-Bs-hZX" id="bJj-uR-dHF"/>
+                        <outlet property="xInputSlider" destination="oEl-uX-JvU" id="NRh-RP-yko"/>
+                        <outlet property="xLabel" destination="Dtq-X3-Oxp" id="2nk-1P-kal"/>
+                        <outlet property="yInputSlider" destination="aVj-mT-nMI" id="Mzp-iO-I0q"/>
+                        <outlet property="yLabel" destination="CMH-rD-a10" id="fBI-yj-UOi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xm-iO-sVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.44186046511629" y="138.41201716738198"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
